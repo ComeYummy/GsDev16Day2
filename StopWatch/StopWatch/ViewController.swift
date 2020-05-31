@@ -117,7 +117,7 @@ class ViewController: UIViewController {
     func displayProgressBar(_ count: Int) {
         // プログレスバーの値を設定(0.0 ~ 1.0) 型はFloat(少数)
         let progress: Float = Float(count % 100) / 100
-            progressBar.setProgress(progress, animated: false)
+        progressBar.setProgress(progress, animated: false)
     }
 
     @IBAction func tappedModalButton(_ sender: Any) {
