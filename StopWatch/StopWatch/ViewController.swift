@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         count += 1
     }
 
-    // countの値からタイマー表示の文字列を生み出す関数
+    // countの値からタイマー表示を行う関数
     func convertToTimerFromCount(_ count: Int) {
         // countを100で割った余りがミリ秒の表記
         let milliseconds: Int = count % 100
