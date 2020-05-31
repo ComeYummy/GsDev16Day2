@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         // count変数の値が変わるたびにdidSet{}の中が動作する
         didSet {
             print("countの値は\(count)だよ👿")
-            convertToTimerFromCount(count)
+            displayTimerFromCount(count)
+            displayProgressBar(count)
         }
     }
 
@@ -43,6 +44,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var millisecondsLabel: UILabel!
 
+    // プログレスバー
+    @IBOutlet weak var progressBar: UIProgressView!
+
     // START/STOPボタン
     @IBOutlet weak var startOrStopButton: CustomButton!
 
@@ -58,6 +62,8 @@ class ViewController: UIViewController {
         minutesLabel.font = .monospacedSystemFont(ofSize: fontSize, weight: .regular)
         secondsLabel.font = .monospacedSystemFont(ofSize: fontSize, weight: .regular)
         millisecondsLabel.font = .monospacedSystemFont(ofSize: fontSize, weight: .regular)
+        // プログレスバーを初期化
+        progressBar.progress = 0.0
     }
 
     // RESETボタンが押されたとき
@@ -93,7 +99,7 @@ class ViewController: UIViewController {
     }
 
     // countの値からタイマー表示を行う関数
-    func convertToTimerFromCount(_ count: Int) {
+    func displayTimerFromCount(_ count: Int) {
         // countを100で割った余りがミリ秒の表記
         let milliseconds: Int = count % 100
         // countを100で割った商が秒の表記(60以上の場合は分に繰り上がるのでさらに60で割った余り)
@@ -105,6 +111,18 @@ class ViewController: UIViewController {
         minutesLabel.text = String(format: "%02d", minutes)
         secondsLabel.text = String(format: "%02d", seconds)
         millisecondsLabel.text = String(format: "%02d", milliseconds)
+    }
+
+    // countの値からプログレスバーを表示を更新
+    func displayProgressBar(_ count: Int) {
+        // プログレスバーの値を設定(0.0 ~ 1.0) 型はFloat(少数)
+        let progress: Float = Float(count % 100) / 100
+            progressBar.setProgress(progress, animated: false)
+    }
+
+    @IBAction func tappedModalButton(_ sender: Any) {
+        let vc = ModalViewController()
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

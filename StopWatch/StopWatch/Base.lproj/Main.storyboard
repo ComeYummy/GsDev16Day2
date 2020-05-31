@@ -151,26 +151,50 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEq-oa-1zT">
+                                <rect key="frame" x="358" y="52" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="RD2-QK-9Ju"/>
+                                    <constraint firstAttribute="width" secondItem="MEq-oa-1zT" secondAttribute="height" multiplier="1:1" id="zP2-vI-Os3"/>
+                                </constraints>
+                                <state key="normal" image="iconmonstr-info-2-240"/>
+                                <connections>
+                                    <action selector="tappedModalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbY-Uu-5FT"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KCF-SW-3kn">
+                                <rect key="frame" x="36" y="508" width="342" height="2"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="0fm-YN-YZE"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MEq-oa-1zT" secondAttribute="trailing" constant="16" id="15s-WI-wgr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eGq-ME-yCb" secondAttribute="bottom" constant="32" id="1g3-M4-2hT"/>
                             <constraint firstItem="fMs-aO-c5x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="86U-qC-Jz0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dp2-eS-UvE" secondAttribute="trailing" constant="32" id="Bh6-yx-tXj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KCF-SW-3kn" secondAttribute="trailing" constant="16" id="Jby-EV-An8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dpz-a5-d0l" secondAttribute="trailing" constant="32" id="N4e-Mu-eP5"/>
                             <constraint firstItem="Dpz-a5-d0l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="UDo-Kv-jO1"/>
                             <constraint firstItem="fMs-aO-c5x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WgB-g1-nSa"/>
                             <constraint firstItem="eGq-ME-yCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Xqg-B6-Hw5"/>
+                            <constraint firstItem="MEq-oa-1zT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Yho-oV-jZ1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eGq-ME-yCb" secondAttribute="trailing" constant="32" id="Zsk-Qb-4sd"/>
                             <constraint firstItem="eGq-ME-yCb" firstAttribute="top" secondItem="Dpz-a5-d0l" secondAttribute="bottom" constant="32" id="cYF-ln-6a2"/>
                             <constraint firstItem="Dp2-eS-UvE" firstAttribute="top" secondItem="fMs-aO-c5x" secondAttribute="bottom" constant="64" id="dnm-xe-eEa"/>
+                            <constraint firstItem="KCF-SW-3kn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="j5Q-wu-VB0"/>
                             <constraint firstItem="Dp2-eS-UvE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="wdv-t0-HiR"/>
+                            <constraint firstItem="KCF-SW-3kn" firstAttribute="top" secondItem="Dp2-eS-UvE" secondAttribute="bottom" constant="48" id="zAj-lT-ZIq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="millisecondsLabel" destination="e7K-tP-LBM" id="bIe-KJ-toc"/>
                         <outlet property="minutesLabel" destination="RAl-Wc-s70" id="S47-0Y-195"/>
+                        <outlet property="progressBar" destination="KCF-SW-3kn" id="9px-dy-09Q"/>
                         <outlet property="secondsLabel" destination="aXd-0f-3Xa" id="VY5-l4-IVj"/>
                         <outlet property="startOrStopButton" destination="eGq-ME-yCb" id="USz-zM-9kq"/>
                     </connections>
@@ -181,6 +205,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconmonstr-info-2-240" width="240" height="240"/>
         <image name="time" width="512" height="512"/>
     </resources>
 </document>

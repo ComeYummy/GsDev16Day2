@@ -16,6 +16,8 @@
 		C5682DE22483D759003C92AC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5682DDF2483D759003C92AC /* CustomView.swift */; };
 		C5682DE32483D759003C92AC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5682DE02483D759003C92AC /* CustomImageView.swift */; };
 		C5682DE42483D759003C92AC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5682DE12483D759003C92AC /* CustomButton.swift */; };
+		C5682DE72483F1C1003C92AC /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5682DE52483F1C1003C92AC /* ModalViewController.swift */; };
+		C5682DE82483F1C1003C92AC /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5682DE62483F1C1003C92AC /* ModalViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C5682DDF2483D759003C92AC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C5682DE02483D759003C92AC /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		C5682DE12483D759003C92AC /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C5682DE52483F1C1003C92AC /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		C5682DE62483F1C1003C92AC /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				C5682DCC2483D6A1003C92AC /* SceneDelegate.swift */,
 				C5682DCE2483D6A1003C92AC /* ViewController.swift */,
 				C5682DD02483D6A1003C92AC /* Main.storyboard */,
+				C5682DE52483F1C1003C92AC /* ModalViewController.swift */,
+				C5682DE62483F1C1003C92AC /* ModalViewController.xib */,
 				C5682DD32483D6A3003C92AC /* Assets.xcassets */,
 				C5682DD52483D6A3003C92AC /* LaunchScreen.storyboard */,
 				C5682DD82483D6A3003C92AC /* Info.plist */,
@@ -142,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5682DE82483F1C1003C92AC /* ModalViewController.xib in Resources */,
 				C5682DD72483D6A3003C92AC /* LaunchScreen.storyboard in Resources */,
 				C5682DD42483D6A3003C92AC /* Assets.xcassets in Resources */,
 				C5682DD22483D6A1003C92AC /* Main.storyboard in Resources */,
@@ -161,6 +168,7 @@
 				C5682DCB2483D6A1003C92AC /* AppDelegate.swift in Sources */,
 				C5682DCD2483D6A1003C92AC /* SceneDelegate.swift in Sources */,
 				C5682DE32483D759003C92AC /* CustomImageView.swift in Sources */,
+				C5682DE72483F1C1003C92AC /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
